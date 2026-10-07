@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects — Amen W. Brhanemesqel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Public+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="layout">
+
+  <aside class="sidebar">
+    <div class="avatar">AWB</div>
+    <nav>
+      <a href="index.html">About me</a>
+      <a href="projects.html" class="current">Projects</a>
+    </nav>
+    <div class="sidebar-footer">
+      <div class="social-links">
+        <a href="mailto:amita85412525@kaist.ac.kr">Email</a>
+        <a href="https://github.com/amenwolde" target="_blank" rel="noopener">GitHub</a>
+        <a href="Amen_Woldesenbet_CV.pdf" target="_blank" rel="noopener">CV</a>
+      </div>
+      <div class="updated">Last updated October 2026</div>
+    </div>
+  </aside>
+
+  <main>
+
+    <h1 class="page-title">Projects</h1>
+
+    <section id="projects">
+
+      <div class="entry">
+        <h3>ClothCall — Discreet Clothing Inspection for Blind Adults</h3>
+        <div class="meta">Mar. 2026 – Current</div>
+        <div class="place">Addis Ababa, Ethiopia &amp; Daejeon, South Korea</div>
+        <p>A native Android app that detects clothing stains and fading for totally blind adults in Ethiopia, through a phone-call interaction so the report stays private.</p>
+        <ul>
+          <li>Conducted a formative study with five blind participants in Addis Ababa, which narrowed the app to stain and fading detection.</li>
+          <li>Led development of a native Android app (Kotlin, Jetpack Compose) that detects stains and fading on clothing, and evaluated it in a follow-up user study.</li>
+          <li>Designed a phone-call interaction that lets the user hear results privately.</li>
+          <li>Co-authoring a paper on the project's design contributions.</li>
+        </ul>
+        <div class="tag-row">
+          <span class="tag">Kotlin</span>
+          <span class="tag">Vision-language models</span>
+          <span class="tag">Accessibility</span>
+          <span class="tag">Field study</span>
+        </div>
+      </div>
+
+      <div class="entry">
+        <h3>Modelling Reorganisation and Recovery of Neural Circuits After Injury</h3>
+        <div class="meta">Jul. 2026 – Aug. 2026</div>
+        <div class="place">University of Leeds, School of Computer Science</div>
+        <p>Built and validated a staged Python model, from a linear control oscillator to a ten-unit neuron chain.</p>
+        <ul>
+          <li>Chose timesteps by self-convergence and checked the code against the control system's analytic solution.</li>
+          <li>Modelled injury as a cut connection and as a reduced drive current, then compared recovery in each.</li>
+          <li><a href="https://drive.google.com/file/d/1W3PH9Ff0q4g5hTz11ZcTxBwVVzl6ne8S/view?usp=sharing" target="_blank" rel="noopener">Internship report</a></li>
+        </ul>
+        <div class="tag-row">
+          <span class="tag">Python</span>
+          <span class="tag">Dynamical systems</span>
+          <span class="tag">FitzHugh–Nagumo</span>
+        </div>
+      </div>
+
+      <div class="entry">
+        <h3>Wizard-of-Oz Mobile Automation Agent for Older Adults</h3>
+        <div class="meta">Oct. 2025 – Mar. 2026</div>
+        <div class="place">IC Lab, KAIST</div>
+        <p>Built the Android app system for a Wizard-of-Oz agent: a floating chat overlay that gives older adults voice and text guidance and structured choices on screen.</p>
+        <ul>
+          <li>Built a wizard console on a FastAPI backend, so a human operator guides users in real time by picking steps and choice templates instead of typing freely.</li>
+          <li>Used the system to run the user study underlying the IMWUT manuscript.</li>
+          <li><a href="https://github.com/Kaist-ICLab/Mobile-AI-helper" target="_blank" rel="noopener">GitHub repo</a></li>
+        </ul>
+        <div class="tag-row">
+          <span class="tag">Android</span>
+          <span class="tag">Kotlin</span>
+          <span class="tag">FastAPI</span>
+          <span class="tag">Wizard-of-Oz</span>
+        </div>
+      </div>
+
+      <div class="entry">
+        <h3>RAG-Based Q&amp;A Assistant for Older Adults on YouTube</h3>
+        <div class="meta">Jul. 2025 – Aug. 2025</div>
+        <div class="place">IC Lab, KAIST</div>
+        <p>Prototyped a RAG-based Q&amp;A assistant that gives older adults in-app help on YouTube, combining semantic FAQ retrieval with a small-LLM fallback and a chat overlay built as a Chrome extension.</p>
+        <ul>
+          <li>Used MiniLM embeddings and ChromaDB over 30 curated FAQs, with FLAN-T5-small as the fallback, served through FastAPI.</li>
+          <li>Evaluated response time of FAQ retrieval versus the LLM fallback.</li>
+          <li><a href="https://drive.google.com/file/d/1zM8v5Gv-6i6zQXkNu6hFYhzypun6-TdA/view?usp=sharing" target="_blank" rel="noopener">Demo</a> · <a href="https://github.com/amenwolde/Youtube-extension" target="_blank" rel="noopener">GitHub repo</a></li>
+        </ul>
+        <div class="tag-row">
+          <span class="tag">RAG</span>
+          <span class="tag">ChromaDB</span>
+          <span class="tag">FastAPI</span>
+        </div>
+      </div>
+
+      <div class="entry">
+        <h3>GrabNGo Mobile App</h3>
+        <div class="meta">Sep. 2024 – Dec. 2024</div>
+        <div class="place">Introduction to Software Engineering, KAIST</div>
+        <p>Built the mobile app front end for a campus convenience store checkout system where customers walk in, shop, and walk out without a checkout line.</p>
+        <ul>
+          <li>Implemented registration, sign-in with password recovery, a welcome screen after face authentication, a live virtual cart, and the payment screen at walkout.</li>
+          <li>Paired with the backend team to debug authentication and cart tracking, and tested usability.</li>
+          <li><a href="https://drive.google.com/file/d/1HJCICB93lQ8GSmQ17-0LfWwXsdIGV2eK/view?usp=sharing" target="_blank" rel="noopener">Demo</a></li>
+        </ul>
+        <div class="tag-row">
+          <span class="tag">Mobile</span>
+          <span class="tag">Front-end</span>
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+</div>
+
+</body>
+</html>

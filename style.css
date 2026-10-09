@@ -83,8 +83,8 @@ nav a:hover { color: var(--accent); text-decoration: none; }
 nav a.current { text-decoration: underline; text-underline-offset: 4px; }
 
 .sidebar-footer {
-  margin-top: 2rem;
-  padding-top: 1.5rem;
+  margin-top: 1rem;
+  padding-top: 0;
   align-self: center;
   text-align: left;
 }

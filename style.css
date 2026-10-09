@@ -10,6 +10,8 @@
 
 * { box-sizing: border-box; }
 
+html { overflow-y: scroll; scrollbar-gutter: stable; }
+
 body {
   margin: 0;
   background: var(--bg);
@@ -18,6 +20,7 @@ body {
   font-size: 16px;
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 
 a { color: var(--accent); text-decoration: none; }
@@ -53,25 +56,21 @@ a:hover { text-decoration: underline; }
 }
 
 .avatar {
-  width: 148px;
-  height: 148px;
-  border-radius: 16px;
-  background: var(--accent);
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: 'Public Sans', sans-serif;
-  font-weight: 600;
-  font-size: 38px;
-  letter-spacing: 1px;
+  width: 200px;
+  height: 200px;
+  border-radius: 18px;
+  background: transparent;
+  object-fit: contain;
+  display: block;
   margin-bottom: 1.75rem;
 }
 
 nav {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 0.85rem;
+  width: 200px;
 }
 
 nav a {
@@ -113,6 +112,7 @@ main {
   padding: 4rem 2rem 6rem 3rem;
   border-left: 1px solid var(--hair);
   max-width: 720px;
+  min-width: 0;
 }
 
 .signature {
@@ -200,6 +200,55 @@ h2 {
 
 .entry ul li::marker { color: var(--accent); }
 
+.entry-img {
+  display: block;
+  width: 100%;
+  max-width: 420px;
+  margin: 1rem 0 0.25rem;
+  border-radius: 10px;
+  border: 1px solid var(--hair);
+  background: var(--bg);
+}
+
+.image-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 1rem 0 0.25rem;
+  max-width: 480px;
+}
+
+.image-row .entry-img { margin: 0; }
+.image-row .entry-img.wide { flex: 1 1 300px; max-width: 320px; }
+.image-row .entry-img.phone { flex: 0 0 130px; max-width: 150px; }
+
+.image-row.triple .entry-img.phone,
+.image-row.quad  .entry-img.phone {
+  flex: 1 1 0;
+  min-width: 0;
+  max-width: none;
+  aspect-ratio: 2 / 5;         /* matches the source screenshots */
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Pair: console + phone — same height, widths differ by aspect ratio */
+.image-row.pair { max-width: none; align-items: stretch; }
+.image-row.pair .entry-img {
+  flex: 0 0 auto;
+  height: 220px;
+  width: auto;
+  max-width: none;
+  object-fit: contain;
+}
+
+@media (max-width: 540px) {
+  .image-row { flex-direction: column; }
+  .image-row .entry-img.wide,
+  .image-row .entry-img.phone { max-width: 100%; width: 100%; flex: 1 1 auto; }
+}
+
 .tag-row {
   display: flex;
   flex-wrap: wrap;
@@ -249,8 +298,8 @@ h2 {
     align-items: center;
     gap: 1.5rem;
   }
-  .avatar { width: 84px; height: 84px; font-size: 22px; margin-bottom: 0; border-radius: 12px; }
-  nav { flex-direction: row; flex-wrap: wrap; gap: 1.25rem; }
+  .avatar { width: 110px; height: 110px; margin-bottom: 0; border-radius: 14px; }
+  nav { flex-direction: row; flex-wrap: wrap; gap: 1.25rem; width: auto; align-items: center; }
   .sidebar-footer { display: none; }
   main { padding: 2.5rem 1.5rem 4rem; border-left: none; border-top: 1px solid var(--hair); max-width: 100%; }
   .signature { font-size: 28px; }

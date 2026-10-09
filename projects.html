@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Projects — Amen W. Brhanemesqel</title>
+<title>Projects · Amen W. Brhanemesqel</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Public+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
@@ -14,7 +14,7 @@
 <div class="layout">
 
   <aside class="sidebar">
-    <div class="avatar">AWB</div>
+    <img class="avatar" src="images/avatar.jpg" alt="Portrait of Amen Woldesenbet Brhanemesqel">
     <nav>
       <a href="index.html">About me</a>
       <a href="projects.html" class="current">Projects</a>
@@ -36,14 +36,15 @@
     <section id="projects">
 
       <div class="entry">
-        <h3>ClothCall — Discreet Clothing Inspection for Blind Adults</h3>
+        <h3>ClothCall: Discreet Clothing Inspection for Blind Adults</h3>
         <div class="meta">Mar. 2026 – Current</div>
         <div class="place">Addis Ababa, Ethiopia &amp; Daejeon, South Korea</div>
         <p>A native Android app that detects clothing stains and fading for totally blind adults in Ethiopia, through a phone-call interaction so the report stays private.</p>
         <ul>
-          <li>Conducted a formative study with five blind participants in Addis Ababa, which narrowed the app to stain and fading detection.</li>
-          <li>Led development of a native Android app (Kotlin, Jetpack Compose) that detects stains and fading on clothing, and evaluated it in a follow-up user study.</li>
-          <li>Designed a phone-call interaction that lets the user hear results privately.</li>
+          <li>Ran a formative study with five blind participants in Ethiopia, in Amharic, which narrowed scope to stain and fading detection and surfaced a preference for a trusted person's judgment over AI analysis alone.</li>
+          <li>Led development of the Android app in Kotlin and Jetpack Compose, using a vision-language model.</li>
+          <li>Built a trusted-person calibration: a caregiver sets a reference photo and tolerance level, and the app refers to them by name instead of giving a generic AI output.</li>
+          <li>Designed a phone-call interaction so the user holds the phone to their ear and hears the result privately.</li>
           <li>Co-authoring a paper on the project's design contributions.</li>
         </ul>
         <div class="tag-row">
@@ -52,22 +53,11 @@
           <span class="tag">Accessibility</span>
           <span class="tag">Field study</span>
         </div>
-      </div>
-
-      <div class="entry">
-        <h3>Modelling Reorganisation and Recovery of Neural Circuits After Injury</h3>
-        <div class="meta">Jul. 2026 – Aug. 2026</div>
-        <div class="place">University of Leeds, School of Computer Science</div>
-        <p>Built and validated a staged Python model, from a linear control oscillator to a ten-unit neuron chain.</p>
-        <ul>
-          <li>Chose timesteps by self-convergence and checked the code against the control system's analytic solution.</li>
-          <li>Modelled injury as a cut connection and as a reduced drive current, then compared recovery in each.</li>
-          <li><a href="https://drive.google.com/file/d/1W3PH9Ff0q4g5hTz11ZcTxBwVVzl6ne8S/view?usp=sharing" target="_blank" rel="noopener">Internship report</a></li>
-        </ul>
-        <div class="tag-row">
-          <span class="tag">Python</span>
-          <span class="tag">Dynamical systems</span>
-          <span class="tag">FitzHugh–Nagumo</span>
+        <div class="image-row quad">
+          <img class="entry-img phone" src="images/clothcall-fade-calibration.png" alt="Add a trusted person: name them (e.g. Wife, Colleague) and rate the same fabric photo at four fade levels (Still fine, Borderline, Retire, Very Worn)">
+          <img class="entry-img phone" src="images/clothcall-shirt-photo.png" alt="Camera view of a khaki button-up shirt the user is holding up to inspect">
+          <img class="entry-img phone" src="images/clothcall-incoming-call.png" alt="Incoming call screen from the trusted person named 'Wife'">
+          <img class="entry-img phone" src="images/clothcall-result.png" alt="Wife is speaking: khaki button-up shirt with two breast pockets, small blue tag on the right chest pocket, colour consistent across the garment, no visible marks or stains; Wife would still consider this fine">
         </div>
       </div>
 
@@ -78,7 +68,7 @@
         <p>Built the Android app system for a Wizard-of-Oz agent: a floating chat overlay that gives older adults voice and text guidance and structured choices on screen.</p>
         <ul>
           <li>Built a wizard console on a FastAPI backend, so a human operator guides users in real time by picking steps and choice templates instead of typing freely.</li>
-          <li>Used the system to run the user study underlying the IMWUT manuscript.</li>
+          <li>Used the system to run the user study underlying an IMWUT manuscript.</li>
           <li><a href="https://github.com/Kaist-ICLab/Mobile-AI-helper" target="_blank" rel="noopener">GitHub repo</a></li>
         </ul>
         <div class="tag-row">
@@ -86,6 +76,10 @@
           <span class="tag">Kotlin</span>
           <span class="tag">FastAPI</span>
           <span class="tag">Wizard-of-Oz</span>
+        </div>
+        <div class="image-row pair">
+          <img class="entry-img wide" src="images/wizard-of-oz-console.png" alt="Wizard Console: active session with choices sent to the user ('어떤 영상을 보시겠어요?' and five Korean news options), tutorial controls, 'Send Choices' template picker, and a Task Flows panel showing the Contents Viewing task 'Find a video (Today's weather report)' broken into four editable steps">
+          <img class="entry-img phone" src="images/wizard-of-oz-phone.png" alt="Older-adult phone on YouTube KR with the Helper Chat overlay opened; the assistant says in Korean '네 알겠습니다, 유튜브에서 오늘 날씨 검색해 드릴게요.' above a large microphone button">
         </div>
       </div>
 
@@ -104,6 +98,7 @@
           <span class="tag">ChromaDB</span>
           <span class="tag">FastAPI</span>
         </div>
+        <img class="entry-img" src="images/youtube-rag-ext.png" alt="Q&amp;A Assistant overlay on YouTube KR: user asks 'How do I like a video' and the assistant replies 'Open the video, tap Like below the player'; a second question 'How do I watch YouTube without ads?' is in the input">
       </div>
 
       <div class="entry">
@@ -119,6 +114,29 @@
         <div class="tag-row">
           <span class="tag">Mobile</span>
           <span class="tag">Front-end</span>
+        </div>
+        <div class="image-row quad">
+          <img class="entry-img phone" src="images/grabngo-home.png" alt="GRAB&amp;GO home: Categories row (Snacks, Beverages, Bakery, Home goods, Others) above a product grid with Shin Ramyun ₩2,000, Banana Milk ₩1,500, Choco Pie ₩1,800, Pepero ₩1,700, Hershey's Chocolate, and Buldak Carbonara">
+          <img class="entry-img phone" src="images/grabngo-cart-empty.png" alt="GRABNGO empty cart screen with a shopping-cart icon and the message 'Your items will be displayed here', Cart tab active in the bottom nav">
+          <img class="entry-img phone" src="images/grabngo-cart-filled.png" alt="GRAB&amp;GO cart with four items (Snickers Chocolate ₩2,500, Milk ₩2,500, Instant Noodles ₩2,500, Cinnjap ₩1,500), each with a red remove button, and a running total of ₩9,000">
+          <img class="entry-img phone" src="images/grabngo-notifications.png" alt="GRABNGO notifications feed: purchase #12345 at Mejom completed, Hot Coffee back in stock, saved ₩100 on last purchase, new deals on snacks and beverages, account updated successfully">
+        </div>
+      </div>
+
+      <div class="entry">
+        <h3>Modelling Reorganisation and Recovery of Neural Circuits After Injury</h3>
+        <div class="meta">Jul. 2026 – Aug. 2026</div>
+        <div class="place">University of Leeds, School of Computer Science</div>
+        <p>Built and validated a staged Python model, from a linear control oscillator to a ten-unit neuron chain.</p>
+        <ul>
+          <li>Chose timesteps by self-convergence and checked the code against the control system's analytic solution.</li>
+          <li>Modelled injury as a cut connection and as a reduced drive current, then compared recovery in each.</li>
+          <li><a href="https://drive.google.com/file/d/1W3PH9Ff0q4g5hTz11ZcTxBwVVzl6ne8S/view?usp=sharing" target="_blank" rel="noopener">Internship report</a></li>
+        </ul>
+        <div class="tag-row">
+          <span class="tag">Python</span>
+          <span class="tag">Dynamical systems</span>
+          <span class="tag">FitzHugh–Nagumo</span>
         </div>
       </div>
 

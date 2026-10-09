@@ -106,7 +106,7 @@ nav a.current { text-decoration: underline; text-underline-offset: 4px; }
 
 .updated {
   margin-top: 0.75rem;
-  margin-left: 2px;
+  margin-left: 14px;
   font-size: 13px;
   color: var(--muted);
 }

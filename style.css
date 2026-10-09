@@ -39,7 +39,8 @@ a:hover { text-decoration: underline; }
 
 .layout {
   display: grid;
-  grid-template-columns: 260px 1fr;
+  grid-template-columns: 260px minmax(0, 720px);
+  justify-content: center;
   max-width: 1180px;
   margin: 0 auto;
   min-height: 100vh;
@@ -111,7 +112,6 @@ nav a.current { text-decoration: underline; text-underline-offset: 4px; }
 main {
   padding: 4rem 2rem 6rem 3rem;
   border-left: 1px solid var(--hair);
-  max-width: 720px;
   min-width: 0;
 }
 

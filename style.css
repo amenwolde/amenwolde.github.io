@@ -104,13 +104,6 @@ nav a.current { text-decoration: underline; text-underline-offset: 4px; }
 }
 .social-links a:hover { color: var(--accent); text-decoration-thickness: 2px; }
 
-.updated {
-  margin-top: 0.75rem;
-  margin-left: 14px;
-  font-size: 13px;
-  color: var(--muted);
-}
-
 main {
   padding: 4rem 1rem 6rem 2rem;
   border-left: 1px solid var(--hair);

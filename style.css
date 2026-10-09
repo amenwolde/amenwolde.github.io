@@ -86,6 +86,7 @@ nav a.current { text-decoration: underline; text-underline-offset: 4px; }
   margin-top: 1rem;
   padding-top: 0;
   align-self: center;
+  margin-left: -16px;
   text-align: left;
 }
 

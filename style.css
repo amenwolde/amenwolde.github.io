@@ -39,9 +39,9 @@ a:hover { text-decoration: underline; }
 
 .layout {
   display: grid;
-  grid-template-columns: 260px minmax(0, 900px);
+  grid-template-columns: 260px minmax(0, 980px);
   justify-content: center;
-  max-width: 1400px;
+  max-width: 1500px;
   margin: 0 auto;
   min-height: 100vh;
 }
@@ -50,7 +50,6 @@ a:hover { text-decoration: underline; }
   position: sticky;
   top: 0;
   align-self: start;
-  height: 100vh;
   padding: 4rem 1.5rem 2rem 0;
   display: flex;
   flex-direction: column;
@@ -84,8 +83,10 @@ nav a:hover { color: var(--accent); text-decoration: none; }
 nav a.current { text-decoration: underline; text-underline-offset: 4px; }
 
 .sidebar-footer {
-  margin-top: auto;
-  padding-top: 2rem;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  align-self: center;
+  text-align: left;
 }
 
 .social-links {
@@ -105,6 +106,7 @@ nav a.current { text-decoration: underline; text-underline-offset: 4px; }
 
 .updated {
   margin-top: 0.75rem;
+  margin-left: -3px;
   font-size: 13px;
   color: var(--muted);
 }

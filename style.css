@@ -10,7 +10,9 @@
 
 * { box-sizing: border-box; }
 
-html { overflow-y: scroll; scrollbar-gutter: stable; }
+html { overflow-y: scroll; scrollbar-gutter: stable; scroll-behavior: smooth; }
+
+section { scroll-margin-top: 2rem; }
 
 body {
   margin: 0;
@@ -119,10 +121,6 @@ main {
   line-height: 1.15;
   margin: 0 0 1.75rem;
   color: var(--ink);
-  background: #DEBEDC;
-  border: 1px solid var(--ink);
-  padding: 0.2em 0.5em;
-  display: inline-block;
 }
 
 .page-title {
@@ -229,7 +227,7 @@ h2 {
   object-position: center;
 }
 
-/* Pair: console + phone — same height, widths differ by aspect ratio */
+/* Pair: console + phone, same height, widths differ by aspect ratio */
 .image-row.pair { max-width: none; align-items: stretch; }
 .image-row.pair .entry-img {
   flex: 0 0 auto;

@@ -1,3 +1,11 @@
+@font-face {
+  font-family: 'Southmore';
+  src: url('fonts/Southmore.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --ink: #1B1B18;
   --muted: #6B6960;
@@ -114,13 +122,12 @@ main {
 }
 
 .signature {
-  font-family: 'Fraunces', 'Public Sans', serif;
+  font-family: 'Southmore', 'Fraunces', serif;
   font-size: 36px;
   font-weight: 500;
   letter-spacing: -0.01em;
   line-height: 1.15;
   margin: 0 0 1.75rem;
-  color: var(--ink);
 }
 
 .page-title {

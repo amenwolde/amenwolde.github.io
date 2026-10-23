@@ -245,9 +245,28 @@ h2 {
 }
 
 @media (max-width: 540px) {
-  .image-row { flex-direction: column; }
-  .image-row .entry-img.wide,
-  .image-row .entry-img.phone { max-width: 100%; width: 100%; flex: 1 1 auto; }
+  .image-row {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    max-width: 100%;
+    padding-bottom: 6px;
+  }
+  .image-row .entry-img {
+    scroll-snap-align: start;
+    flex: 0 0 auto;
+  }
+  .image-row.quad .entry-img.phone {
+    width: 140px;
+    flex: 0 0 140px;
+    max-width: none;
+    aspect-ratio: 2 / 5;
+  }
+  .image-row.pair .entry-img {
+    height: 200px;
+    width: auto;
+  }
 }
 
 .tag-row {

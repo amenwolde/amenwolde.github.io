@@ -211,6 +211,10 @@ h2 {
   background: var(--bg);
 }
 
+.entry-img.clothcall-overview {
+  max-width: 640px;
+}
+
 .image-row {
   display: flex;
   flex-wrap: wrap;
